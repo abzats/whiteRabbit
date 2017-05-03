@@ -1,0 +1,46 @@
+p, p span {
+    margin: 0 0 .3em 0;
+    line-height: 1.5;
+    strong, u, a {
+        vertical-align: baseline;
+    }
+}
+.text-white {
+    color: #fff!important;
+}
+.text-black {
+    color: $brand-secondary!important;
+}
+.text-gray-dark {
+    color: $gray-dark;
+}
+.text-gray {
+    color: $gray;
+}
+.text-gray-light {
+    color: $gray-light;
+}
+.text-gray-lighter {
+    color: $gray-lighter;
+}
+.text-info {
+    color: $brand-info;
+}
+.text-primary {
+    color: $brand-primary;
+}
+.text-secondary {
+    color: $brand-secondary;
+}
+
+.text-sm {
+
+}
+.text-md {
+    font-size: 16px;
+}
+.text-lg {
+    font-weight: 400;
+    font-size: 36px;
+    margin-bottom: 38px;
+}
