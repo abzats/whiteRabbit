@@ -18,8 +18,9 @@
 
     gulp.task('clean-js', function () {
         var jsfiles = [
+            'web/js/*.js',
             'web/js/**/*.js',
-            'web/js/*.js'];
+        ];
         return del(jsfiles);
     });
 
@@ -49,10 +50,22 @@
     gulp.task('vendors', function () {
         var nodeFiles = [
             'node_modules/jquery/dist/jquery.min.js',
+            'web-src/lib/*/*.js',
         ];
         return gulp.src(nodeFiles)
             .pipe(expect(nodeFiles))
             .pipe(concat('vendors.js'))
+            .pipe(gulp.dest('web/js'));
+    });
+
+    // ie9 libs
+    gulp.task('ie9', function () {
+        var nodeFiles = [
+            'node_modules/lt-ie-9/lt-ie-9.js',
+        ];
+        return gulp.src(nodeFiles)
+            .pipe(expect(nodeFiles))
+            .pipe(concat('ie9.min.js'))
             .pipe(gulp.dest('web/js'));
     });
 
@@ -104,16 +117,14 @@
         gulp.watch(['web-src/sass/components/*.scss'], ['sass']);
         gulp.watch(['web-src/sass/**/*.scss'], ['sass']);
         gulp.watch(['web-src/sass/*.scss'], ['sass']);
-        gulp.watch('web-src/lib/*.js', ['scripts']);
-        gulp.watch('web-src/js/**/**/*.js', ['scripts']);
-        gulp.watch('web-src/js/**/*.js', ['scripts']);
         gulp.watch('web-src/js/*.js', ['scripts']);
+        gulp.watch('web-src/js/*/*.js', ['scripts']);
     });
 
     // Default task : we update the html, css, the images, the scripts
     gulp.task('default', function () {
             runSequence(
-                ['clean-js', 'clean-css', 'images', 'sass', 'vendors', 'scripts']
+                ['clean-js', 'clean-css', 'images', 'sass', 'vendors', 'ie9', 'scripts']
             );
         }
     );

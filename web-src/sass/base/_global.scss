@@ -6,22 +6,9 @@
     -ms-user-select: none;
     user-select: none;
 }
-
-//Selection color
-::selection { 
-    background: $brand-primary;
-    color: $white;
+html {
+    overflow: hidden;
 }
-
-::-moz-selection { 
-    background: $brand-primary;
-    color: $white;
-}
-
-select {
-    border: 1px solid $brand-primary;
-}
-
 body {
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-size: 12px;

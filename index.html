@@ -7,15 +7,11 @@
     <title>White rabbit</title>
 
     <!--[if lte IE 9]>
-    <script src="web/js/lt-ie-9/lt-ie-9.min.js"></script>
+    <script src="web/js/ie.min.js"></script>
     <![endif]-->
 
     <link rel="stylesheet" href="web/css/main.css" />
-
-    <link rel="shortcut icon" href="web/img/favicon.png" type="image/x-icon" />
-    <link rel="icon" href="web/img/favicon.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="web/img/apple-touch-icon.png" />
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="robots" content="index,follow" />
     <meta name="keywords" content="white, rabbit, neo, there, is, no, spoon" />
@@ -36,11 +32,105 @@
     <meta name="twitter:image" content="web/img/some_logo.png" />
 </head>
 <body>
-    <noscript>
+<noscript>
+    <div class="no-script">
         Matrix opens for only JS supplied user
-    </noscript>
+    </div>
+</noscript>
 
-    <script src="web/js/vendors.js"></script>
-    <script src="web/js/main.js"></script>
+<header>
+    <div class="matrix_wraper">
+        <div class="matrix"></div>
+    </div>
+    <div class="top_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>
+                        ALEXANDER A.SERGEEV</br>
+                        FRONTEND DEVELOPER
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div id="whiteRabbit">
+                    <div id="whiteRabbitCards"></div>
+                    <div id="whiteRabbitDetails"></div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="menu">
+                    <div class="menu__wrapper">
+                        <div class="menu__item active" data-mode="defaultTemplate">
+                            <div class="menu__item__title text-lg-1">
+                                Vertical 'side-bar' mode
+                            </div>
+                            <div class="menu__item__content">
+                                <div class="menu__item__content__container text-gray">
+                                    <p class="pb-12">
+                                        * Scroll inside of the cards-bar.
+                                    </p>
+                                    <p class="pb-12">
+                                        * Click on cards to see datails.
+                                    </p>
+                                    <p class="pb-12">
+                                        That mode emulates 'side-bar' widget with opening separate 'details' block.
+                                    </p>
+                                    <p class="pb-12">
+                                        Review title 'cutted' to show less than 40 characters. If applied we add '...' on the line end.
+                                    </p>
+                                    <p class="pb-12">
+                                        If review body is too long we hide it with gradined cover-block.
+                                        <br />
+                                        Added an util to show line brakes. Try to open 'Erika Wolfe' details.
+                                    </p>
+                                    <p>
+                                        There are fallbacks for all empty fields, check the last card.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu__item" data-mode="responsiveTemplate">
+                            <div class="menu__item__title text-lg-1">
+                                'Responsive columns' mode
+                            </div>
+                            <div class="menu__item__content">
+                                <div class="menu__item__content__container text-gray">
+                                    <p class="pb-12">
+                                        * Cards auto sorted by js for two columns for >992px devises.
+                                    </p>
+                                    <p class="pb-12">
+                                        * Try to resize browser window.
+                                    </p>
+                                    <p>
+                                        We got json object via ajax request on page loading and reuse it to rebuild cards and show 'details' block.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="details">
+        <h2 class="pb-12">
+            This app emulates two view modes for the widgets.
+        </h2>
+        <p class="text-md-2 pb-12">
+            * Feel free to use menu panels on the right side.
+        </p>
+    </div>
+</div>
+
+<script src="web/js/vendors.js"></script>
+<script src="web/js/main.js"></script>
 </body>
 </html>

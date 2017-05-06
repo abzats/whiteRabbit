@@ -1,15 +1,13 @@
-p, p span {
-    margin: 0 0 .3em 0;
-    line-height: 1.5;
-    strong, u, a {
-        vertical-align: baseline;
-    }
+p {
+    padding: 0;
+    margin: 0;
 }
+
 .text-white {
-    color: #fff!important;
+    color: #fff;
 }
 .text-black {
-    color: $brand-secondary!important;
+    color: $black;
 }
 .text-gray-dark {
     color: $gray-dark;
@@ -23,24 +21,21 @@ p, p span {
 .text-gray-lighter {
     color: $gray-lighter;
 }
-.text-info {
-    color: $brand-info;
+
+.text-md-1 {
+    font-size: 15px;
+    font-weight: 600;
 }
-.text-primary {
-    color: $brand-primary;
+.text-md-2 {
+    font-size: 15px;
 }
-.text-secondary {
-    color: $brand-secondary;
+.text-lg-1 {
+    font-size: 17px;
+    font-weight: 600;
 }
 
-.text-sm {
-
-}
-.text-md {
-    font-size: 16px;
-}
-.text-lg {
-    font-weight: 400;
-    font-size: 36px;
-    margin-bottom: 38px;
+.one_line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
