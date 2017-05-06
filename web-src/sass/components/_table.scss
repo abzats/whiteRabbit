@@ -1,0 +1,11 @@
+.table {
+    display: table;
+    width: 100%;
+    border-spacing: 0;
+    li {
+        display: table-row;
+        & > div {
+            display: table-cell;
+        }
+    }
+}

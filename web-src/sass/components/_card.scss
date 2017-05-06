@@ -1,0 +1,159 @@
+.card {
+    position: relative;
+    width: 300px;
+    background-color: $white;
+    border-radius: 2px;
+    margin: 0 0 24px;
+    box-shadow: 0 2px 10px 0 rgba(21,21,43,.05);
+    z-index: $zi1;
+    cursor: pointer;
+    .card-block {
+        padding: 0 24px 24px;
+    }
+    .card__top-overlay {
+        position: relative;
+        padding: 24px 24px 54px;
+        height: 132px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        &.compact {
+            padding: 0 24px 12px;
+            display: block;
+            text-align: left;
+            margin: 0;
+            height: auto;
+            height: initial;
+        }
+    }
+    .card__avatar-img {
+        position: absolute;
+        width: 100%;
+        height: 0;
+        left: 0;
+        bottom: 37px;
+        img {
+            display: inline-block;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            width: 74px;
+            height: 74px;
+            background-color: $white;
+        }
+    }
+    .card__stars-block {
+        position: relative;
+        width: 100%;
+        max-width: 174px;
+        margin: auto;
+        z-index: $zi2;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        &.card__stars-block--block {
+            padding: 24px 24px 12px;
+            margin: 0;
+            max-width: 198px;
+        }
+    }
+    .card__text-block {
+        position: relative;
+        height: 60px;
+        overflow: hidden;
+        margin-bottom: 12px;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            height: 16px;
+            background: linear-gradient(to bottom,rgba(255,255,255,0) 0,#fff 100%);
+        }
+        &.full {
+            height: auto;
+            height: initial;
+            overflow: auto;
+            &:after {
+                content: none;
+            }
+        }
+    }
+    &:hover {
+        .card__hover-overlay {
+            opacity: 1;
+        }
+    }
+    .card__hover-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: rgba($white, .9);
+        display: block;
+        transition: all .2s;
+        vertical-align: middle;
+        padding: 24px;
+        text-align: center;
+        z-index: $zi1;
+    }
+    .card__hover-overlay__text {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+    }
+    &.stars-1 {
+        .card__top-overlay {
+            background-color: $star-1;
+            background: -webkit-linear-gradient(to bottom left, rgba(lighten($star-1,10%),.8), rgba($star-1,.8));
+            background: -o-linear-gradient(to bottom left, rgba(lighten($star-1,10%),.8), rgba($star-1,.8));
+            background: -moz-linear-gradient(to bottom left, rgba(lighten($star-1,10%),.8), rgba($star-1,.8));
+            background: linear-gradient(to bottom left, rgba(lighten($star-1,10%),.8), rgba($star-1,.8));
+            color: $white;
+        }
+    }
+    &.stars-2 {
+        .card__top-overlay {
+            background-color: $star-2;
+            background: -webkit-linear-gradient(to bottom left, rgba(lighten($star-2,10%),.8), rgba($star-2,.8));
+            background: -o-linear-gradient(to bottom left, rgba(lighten($star-2,10%),.8), rgba($star-2,.8));
+            background: -moz-linear-gradient(to bottom left, rgba(lighten($star-2,10%),.8), rgba($star-2,.8));
+            background: linear-gradient(to bottom left, rgba(lighten($star-2,10%),.8), rgba($star-2,.8));
+            color: $white;
+        }
+    }
+    &.stars-3 {
+        .card__top-overlay {
+            background-color: $star-3;
+            background: -webkit-linear-gradient(to bottom left, rgba(lighten($star-3,10%),.8), rgba($star-3,.8));
+            background: -o-linear-gradient(to bottom left, rgba(lighten($star-3,10%),.8), rgba($star-3,.8));
+            background: -moz-linear-gradient(to bottom left, rgba(lighten($star-3,10%),.8), rgba($star-3,.8));
+            background: linear-gradient(to bottom left, rgba(lighten($star-3,10%),.8), rgba($star-3,.8));
+            color: $white;
+        }
+    }
+    &.stars-4 {
+        .card__top-overlay {
+            background-color: $star-4;
+            background: -webkit-linear-gradient(to bottom left, rgba(lighten($star-4,10%),.8), rgba($star-4,.8));
+            background: -o-linear-gradient(to bottom left, rgba(lighten($star-4,10%),.8), rgba($star-4,.8));
+            background: -moz-linear-gradient(to bottom left, rgba(lighten($star-4,10%),.8), rgba($star-4,.8));
+            background: linear-gradient(to bottom left, rgba(lighten($star-4,10%),.8), rgba($star-4,.8));
+            color: $white;
+        }
+    }
+    &.stars-5 {
+        .card__top-overlay {
+            background-color: $star-5;
+            background: -webkit-linear-gradient(to bottom left, rgba(lighten($star-5,10%),.8), rgba($star-5,.8));
+            background: -o-linear-gradient(to bottom left, rgba(lighten($star-5,10%),.8), rgba($star-5,.8));
+            background: -moz-linear-gradient(to bottom left, rgba(lighten($star-5,10%),.8), rgba($star-5,.8));
+            background: linear-gradient(to bottom left, rgba(lighten($star-5,10%),.8), rgba($star-5,.8));
+            color: $white;
+        }
+    }
+}

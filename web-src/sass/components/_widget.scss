@@ -1,0 +1,56 @@
+#whiteRabbit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    #whiteRabbitCards {
+        position: relative;
+        width: 360px;
+        margin-left: 0;
+        top: 2vh;
+        height: 96%;
+        overflow-y: auto;
+        padding: 0 15px;
+        .card {
+            width: 100%;
+        }
+    }
+    #whiteRabbitDetails {
+        position: relative;
+        height: 96%;
+        width: calc(100% - 360px);
+        max-width: 360px;
+        margin: auto;
+        overflow-y: auto;
+        h2 {
+            padding-bottom: 18px;
+        }
+        .description {
+            padding-bottom: 32px;
+        }
+    }
+    &.responsiveTemplate {
+        flex-direction: row;
+        #whiteRabbitDetails {
+            display: none;
+        }
+        #whiteRabbitCards {
+            width: 100%;
+            .card {
+                position: absolute;
+                width: calc(50% - 15px);
+                float: left;
+                cursor: auto;
+                transition: all .4s;
+                opacity: 0;
+                @media (max-width: 991px) {
+                    width: 100%;
+                    position: relative;
+                    left: auto!important;
+                    top: auto!important;
+                }
+            }
+        }
+    }
+}
