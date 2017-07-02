@@ -29,6 +29,8 @@
         }
         @media (max-width: 997px) {
             overflow-y: auto;
+            height: auto;
+            height: initial;
             .col-8 {
                 width: 100%;
             }

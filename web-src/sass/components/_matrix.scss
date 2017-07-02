@@ -44,6 +44,9 @@ header {
     z-index: $zi1;
     background-image: linear-gradient(transparent 0,rgba(10,16,10,.5) 100%);
     background-size: 100vh 2px;
+    .container .row {
+        height: 100vh;
+    }
     h1 {
         position: absolute;
         bottom: 24px;
@@ -53,6 +56,7 @@ header {
         font-family: 'Source Code Pro', Arial;
         @media (max-width: 997px) {
             right: 20px;
+            margin-bottom: 60px;
         }
     }
 }

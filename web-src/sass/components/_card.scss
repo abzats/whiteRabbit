@@ -7,8 +7,10 @@
     box-shadow: 0 2px 10px 0 rgba(21,21,43,.05);
     z-index: $zi1;
     cursor: pointer;
-    &:last-child {
-        margin-bottom: 0;
+    @media (min-width: 996px) {
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
     .card-block {
         padding: 0 24px 24px;
@@ -85,8 +87,10 @@
         }
     }
     &:hover {
-        .card__hover-overlay {
-            opacity: 1;
+        @media (min-width: 996px) {
+            .card__hover-overlay {
+                opacity: 1;
+            }
         }
     }
     .card__hover-overlay {
