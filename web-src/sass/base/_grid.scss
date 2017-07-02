@@ -28,9 +28,11 @@
             width: 100%;
         }
         @media (max-width: 997px) {
-            overflow-y: auto;
-            height: auto;
-            height: initial;
+            &.row {
+                overflow-y: auto;
+                height: auto;
+                height: initial;
+            }
             .col-8 {
                 width: 100%;
             }

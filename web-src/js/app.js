@@ -41,7 +41,6 @@ var App = App || {};
 
     $(document)
         .ready(function () {
-            App.Matrix.init();
             App.Core.init();
         });
 })(jQuery);
