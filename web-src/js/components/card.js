@@ -6,7 +6,6 @@ var App = App || {};
     /**
      * Cards templates
      */
-
     App.Card = {
         defaultTemplate: defaultTemplate,
         responsiveTemplate: responsiveTemplate,
@@ -39,11 +38,11 @@ var App = App || {};
         card += reviewTitleFormated;
         card += '</h4>';
 
-        card += '<div class="card__avatar-img">';
+        card += '<div class="card__avatar">';
         if (avatarUrl === '') {
-            card += '<img src="web/img/noavatar.png" alt="' + fullName + '" />';
+            card += '<img src="web/img/noavatar.png" alt="' + fullName + '" class="card__avatar__img" />';
         } else {
-            card += '<img src="data/img/' + avatarUrl + '" alt="' + fullName + '" />';
+            card += '<img src="data/img/' + avatarUrl + '" alt="' + fullName + '" class="card__avatar__img" />';
         }
         card += '</div>';
 
@@ -55,7 +54,7 @@ var App = App || {};
         card += '</div>';
 
         card += '<div class="card__stars-block pb-12">';
-        card += '<img src="web/img/' + starRating + '-stars-260x48.png" alt="' + starRating + 'stars" />';
+        card += '<img src="web/img/' + starRating + '-stars-260x48.png" alt="' + starRating + 'stars" class="card__stars-block__img" />';
         card += '</div>';
 
         card += '<div class="card__text-block text-gray">';
@@ -104,7 +103,7 @@ var App = App || {};
         card += '<div class="card text-left">';
 
         card += '<div class="card__stars-block card__stars-block--block pb-12">';
-        card += '<img src="web/img/' + starRating + '-stars-260x48.png" alt="' + starRating + 'stars" />';
+        card += '<img src="web/img/' + starRating + '-stars-260x48.png" alt="' + starRating + 'stars" class="card__stars-block__img" />';
         card += '</div>';
 
         card += '<div class="card__top-overlay compact">';

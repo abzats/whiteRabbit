@@ -17,6 +17,10 @@ header {
     left: calc(50% - 100px);
     font-weight: 400;
     color: #6F0;
+    @media (max-width: 997px) {
+        top: 30px;
+        left: 20px;
+    }
 }
 .matrix {
     display: inline-block;
@@ -47,5 +51,8 @@ header {
         font-weight: 300;
         color: $white;
         font-family: 'Source Code Pro', Arial;
+        @media (max-width: 997px) {
+            right: 20px;
+        }
     }
 }

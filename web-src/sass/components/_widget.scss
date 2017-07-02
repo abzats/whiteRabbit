@@ -4,7 +4,7 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    #whiteRabbitCards {
+    .white-rabbit__cards {
         position: relative;
         width: 360px;
         margin-left: 0;
@@ -16,7 +16,7 @@
             width: 100%;
         }
     }
-    #whiteRabbitDetails {
+    .white-rabbit__details {
         position: relative;
         height: 96%;
         width: calc(100% - 360px);
@@ -32,14 +32,14 @@
     }
     &.responsiveTemplate {
         flex-direction: row;
-        #whiteRabbitDetails {
+        .white-rabbit__details {
             display: none;
         }
-        #whiteRabbitCards {
+        .white-rabbit__cards {
             width: 100%;
             .card {
                 position: absolute;
-                width: calc(50% - 15px);
+                width: calc(50% - 37.5px);
                 float: left;
                 cursor: auto;
                 transition: all .4s;
@@ -51,6 +51,18 @@
                     top: auto!important;
                 }
             }
+        }
+    }
+    @media (max-width: 997px) {
+        margin-bottom: 2vh;
+        .white-rabbit__cards {
+            padding: 0;
+            overflow-y: initial;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .white-rabbit__details {
+            display: none;
         }
     }
 }

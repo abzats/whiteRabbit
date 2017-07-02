@@ -5,13 +5,8 @@
     background: $white;
     border-radius: 2px;
     overflow: hidden;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    .menu__wrapper {
+    @extend %noselect;
+    .menu__inner {
         .menu__item {
             .menu__item__title {
                 position: relative;
@@ -38,12 +33,12 @@
             .menu__item__content {
                 position: relative;
                 overflow: hidden;
-                padding: 0px 24px;
+                padding: 0 24px;
                 height: auto;
-                max-height: 0px;
+                max-height: 0;
                 transition: all .4s;
                 .menu__item__content__container {
-                    padding: 12px 0px;
+                    padding: 12px 0;
                 }
             }
             &.active {
@@ -63,6 +58,29 @@
                     transition: all .8s;
                     max-height: 500px;
                 }
+            }
+        }
+    }
+}
+.menu__wrapper {
+    @media (max-width: 997px) {
+        order: -1;
+        .menu {
+            height: auto;
+            height: initial;
+            margin: 0;
+            .menu__inner {
+                display: flex;
+                .menu__item__content {
+                    display: none;
+                }
+            }
+            .menu__item {
+                width: 50%;
+                display: flex;
+            }
+            .menu__item__title {
+                width: 100%;
             }
         }
     }

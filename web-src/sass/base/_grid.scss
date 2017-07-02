@@ -27,5 +27,14 @@
         .col-12 {
             width: 100%;
         }
+        @media (max-width: 997px) {
+            overflow-y: auto;
+            .col-8 {
+                width: 100%;
+            }
+            .col-4 {
+                width: 100%;
+            }
+        }
     }
 }

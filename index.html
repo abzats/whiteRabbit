@@ -10,6 +10,10 @@
     <script src="web/js/ie.min.js"></script>
     <![endif]-->
 
+    <link rel="shortcut icon" href="web/img/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="web/img/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="web/img/apple-touch-icon.png" />
+
     <link rel="stylesheet" href="web/css/main.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -17,19 +21,22 @@
     <meta name="keywords" content="white, rabbit, neo, there, is, no, spoon" />
     <meta name="description" content="What do all men with power want? More power." />
 
+
+
+
     <!-- FB graph tags -->
-    <meta property="og:url" content="<?php echo $_SERVER['REQUEST_URI']; ?>" />
+    <meta property="og:url" content="http://wr.thealexweb.net/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="White rabbit" />
     <meta property="og:description" content="What do all men with power want? More power." />
-    <meta property="og:image" content="web/img/some_logo.png" />
+    <meta property="og:image" content="web/img/some_logo.jpg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@whiterabbit" />
     <meta name="twitter:title" content="White rabbit" />
     <meta name="twitter:description" content="What do all men with power want? More power." />
-    <meta name="twitter:image" content="web/img/some_logo.png" />
+    <meta name="twitter:image" content="web/img/some_logo.jpg" />
 </head>
 <body>
 <noscript>
@@ -60,13 +67,13 @@
         <div class="row">
             <div class="col-8">
                 <div id="whiteRabbit">
-                    <div id="whiteRabbitCards"></div>
-                    <div id="whiteRabbitDetails"></div>
+                    <div id="whiteRabbitCards" class="white-rabbit__cards"></div>
+                    <div id="whiteRabbitDetails" class="white-rabbit__details"></div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-4 menu__wrapper">
                 <div class="menu">
-                    <div class="menu__wrapper">
+                    <div class="menu__inner">
                         <div class="menu__item active" data-mode="defaultTemplate">
                             <div class="menu__item__title text-lg-1">
                                 Vertical 'side-bar' mode
@@ -77,7 +84,7 @@
                                         * Scroll inside of the cards-bar.
                                     </p>
                                     <p class="pb-12">
-                                        * Click on cards to see datails.
+                                        * Click on cards to see details.
                                     </p>
                                     <p class="pb-12">
                                         That mode emulates 'side-bar' widget with opening separate 'details' block.

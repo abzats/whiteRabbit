@@ -2,12 +2,15 @@ var App = App || {};
 
 (function ($) {
 
+    /**
+     * Responsive grid
+     */
     App.Grid = {
         init: init,
     };
 
     /**
-     * Replace '\n' with '<br />
+     * Init function
      */
     function init () {
         responsiveGrid();
@@ -39,7 +42,7 @@ var App = App || {};
             $('#whiteRabbitCards .card:nth-child(even)')
                 .each(function () {
                     $(this).css({
-                        left: 'calc(50% + 30px)',
+                        left: 'calc(50% + 22.5px)',
                         top: evenHeight,
                     });
                     evenHeight = evenHeight + $(this).height() + 24;
